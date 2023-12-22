@@ -36,22 +36,13 @@
       <button class="my-2 pointer-events-auto rounded-md bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500" onclick="openWithChrome()">With Chrome googlechrome:// </button>
       
     </div>
-     <div class="border-2 mb-5 border-solid">
-      <p>googlechrome://navigate?url=x </p>
-      <button class="my-2 pointer-events-auto rounded-md bg-green-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-green-500" onclick="openWithShortChrome()">With Chrome chrome:// </button>
-      
-    </div>
+     <br/>
     <div class="border-2 mb-5 border-solid">
-
-        <a href="intent://www.example.com#Intent;package=com.android.chrome;end" target="_blank">Open in Chrome</a>
-
+        <a href="intent://www.insummary.com#Intent;package=com.android.chrome;end" target="_blank">Open in Chrome</a>
     </div>
  <script>
   function openWithChrome(){
     window.open("googlechrome://www.insummary.com", "_blank");
-  }
-    function openWithShortChrome(){
-    window.open("googlechrome://navigate?url=www.insummary.com", "_blank");
   }
 </script>
 </html>
