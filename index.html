@@ -1,33 +1,52 @@
 <html>
   <body>
-    <head>Sample</head>
+    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
   </body>
   <div>
-    <div>
-      <p>Just puts you on a new tab in side webview</p>
-    <a href="http://www.example.com" target="_blank">Open in as a new tab with target _blank</a>
-    <button onclick="window.open('insummary.com', '_system')">With system</button>
+    
+    <div class="border-2 mb-5 border-solid">
+      <p>[ Tested , it works for ios with chrome installed but not in andriod ] </p>
+      <button class="my-2 pointer-events-auto rounded-md bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500" onclick="openWithChrome()">With Chrome googlechrome:// </button>
+      
     </div>
-    <div>
-      <p> This works to open in chrome</p>
-      <br />
-    <button onclick="openWithChrome()">With Chrome googlechrome://</button>
+     <div class="border-2 mb-5 border-solid">
+      <p>chrome:// </p>
+      <button class="my-2 pointer-events-auto rounded-md bg-green-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-green-500" onclick="openWithShortChrome()">With Chrome chrome:// </button>
+      
     </div>
-    <div>
-      <p> This works to open in safari</p>
-      <br />
-    <button onclick="openWithSafari()">With safari safari://</button>
-    </div>
-   
-   
-  </div>
-  
  <script>
   function openWithChrome(){
     window.open("googlechrome://www.insummary.com", "_blank");
   }
-  function openWithSafari(){
-    window.open("safari://www.insummary.com", "_blank");
+    function openWithShortChrome(){
+    window.open("chrome://www.insummary.com", "_blank");
   }
 </script>
 </html>
