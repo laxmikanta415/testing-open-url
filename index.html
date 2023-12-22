@@ -3,22 +3,20 @@
     <head>Sample</head>
   </body>
   <div>
-    <a href="http://www.example.com" target="_blank" onclick="openInSystemBrowser(event)">Open in default browser</a>
-    <a href="googlechrome://http://www.insummary.com">Chrome to open</a>
-
+    <a href="http://www.example.com" target="_blank">Open in as a new tab with target _blank</a>
+    <a href="">Chrome to open</a>
+    <button onclick="openWith()">With Chrome googlechrome://</button>
+    <button onclick="openWithWindow('_system')">With system</button>
+      <button onclick="openWithWindow('_blank')">With blank target</button>
+    <a href="intent://myapp.com/mainactivity/#Intent;package=com.example.myapp;action=android.intent.action.VIEW;end">With intent</a>
   </div>
+  
  <script>
-function openInSystemBrowser(event) {
-    event.preventDefault(); // Prevent the default behavior of opening in a new window/tab
-
-    var url = event.target.href;
-
-    // Display a message to the user
-    var confirmation = confirm("For the best experience, we recommend opening this link in your device's default browser. Do you want to continue?");
-    
-    if (confirmation) {
-        window.open("googlechrome://http://www.insummary.com", '_system'); // '_system' is not a standard HTML target; it's specific to certain frameworks like Cordova
-    }
-}
+  function openWith(){
+    window.open("googlechrome://www.insummary.com", "_blank");
+  }
+  function openWithWindow(type){
+    window.open("https://www.insummary.com", type);
+  }
 </script>
 </html>
