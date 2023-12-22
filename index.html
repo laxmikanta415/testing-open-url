@@ -4,7 +4,7 @@
   </body>
   <div>
     <a href="http://www.example.com" target="_blank" onclick="openInSystemBrowser(event)">Open in default browser</a>
-    <a href="googlechrome://open-url?url=http://www.example.com">Chrome to open</a>
+    <a href="googlechrome://http://www.insummary.com">Chrome to open</a>
 
   </div>
  <script>
@@ -17,7 +17,7 @@ function openInSystemBrowser(event) {
     var confirmation = confirm("For the best experience, we recommend opening this link in your device's default browser. Do you want to continue?");
     
     if (confirmation) {
-        window.open(url, '_system'); // '_system' is not a standard HTML target; it's specific to certain frameworks like Cordova
+        window.open("googlechrome://http://www.insummary.com", '_system'); // '_system' is not a standard HTML target; it's specific to certain frameworks like Cordova
     }
 }
 </script>
