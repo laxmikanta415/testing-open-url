@@ -3,11 +3,22 @@
     <head>Sample</head>
   </body>
   <div>
-    <button onclick="clicked()">Test</button>
+    <a href="http://www.example.com" target="_blank" onclick="openInSystemBrowser(event)">Open in default browser</a>
+
+
   </div>
-  <script>
-    function clicked(){
-      window.open("https://www.insummary.com","_system");
+ <script>
+function openInSystemBrowser(event) {
+    event.preventDefault(); // Prevent the default behavior of opening in a new window/tab
+
+    var url = event.target.href;
+
+    // Display a message to the user
+    var confirmation = confirm("For the best experience, we recommend opening this link in your device's default browser. Do you want to continue?");
+    
+    if (confirmation) {
+        window.open(url, '_system'); // '_system' is not a standard HTML target; it's specific to certain frameworks like Cordova
     }
-  </script>
+}
+</script>
 </html>
