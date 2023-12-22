@@ -3,20 +3,31 @@
     <head>Sample</head>
   </body>
   <div>
+    <div>
+      <p>Just puts you on a new tab in side webview</p>
     <a href="http://www.example.com" target="_blank">Open in as a new tab with target _blank</a>
-    <a href="">Chrome to open</a>
-    <button onclick="openWith()">With Chrome googlechrome://</button>
-    <button onclick="openWithWindow('_system')">With system</button>
-      <button onclick="openWithWindow('_blank')">With blank target</button>
-    <a href="intent://myapp.com/mainactivity/#Intent;package=com.example.myapp;action=android.intent.action.VIEW;end">With intent</a>
+    <button onclick="window.open('insummary.com, '_system')">With system</button>
+    </div>
+    <div>
+      <p> This works to open in chrome</p>
+      <br />
+    <button onclick="openWithChrome()">With Chrome googlechrome://</button>
+    </div>
+    <div>
+      <p> This works to open in safari</p>
+      <br />
+    <button onclick="openWithSafari()">With safari safari://</button>
+    </div>
+   
+   
   </div>
   
  <script>
-  function openWith(){
+  function openWithChrome(){
     window.open("googlechrome://www.insummary.com", "_blank");
   }
-  function openWithWindow(type){
-    window.open("https://www.insummary.com", type);
+  function openWithSafari(){
+    window.open("safari://www.insummary.com", "_blank");
   }
 </script>
 </html>
